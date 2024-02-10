@@ -26,6 +26,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install --user molecule ansible-lint
-        pip install --user "molecule-plugins[docker]"
+        python -m pip install --upgrade pip        
+    - name: instal molecule ansible-lint
+      run: pip install --user molecule ansible-lint
+    - name: instal molecule docker
+      run: pip install --user "molecule-plugins[docker]"
